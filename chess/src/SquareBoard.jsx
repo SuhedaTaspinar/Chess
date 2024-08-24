@@ -1,9 +1,12 @@
 import React from 'react';
 
 const SquareBoard = ({brd}) => {
-    console.log("brd", brd);
+    const pieceImage = require(`../public/assets/images/${brd.type}_${brd.color}.png`)
+    //console.log("brd", brd);
     return (
-        <div>{brd.type}</div>
+        <div>
+            <img src={pieceImage} alt=""/>
+        </div>
     )
 }
 export default SquareBoard;
